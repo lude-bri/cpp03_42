@@ -6,8 +6,15 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:04:55 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/11 17:04:56 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:15:05 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(std::string &_name) {
+
+}
+
+ClapTrap::~ClapTrap() {
+}
