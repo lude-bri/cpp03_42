@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 21:36:48 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 21:52:56 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/16 21:55:29 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ FragTrap::~FragTrap(){
 		<< RESET << std::endl;
 }
 
-void	FragTrap::highFiveGuys() {}
+void	FragTrap::highFiveGuys(void) {}
