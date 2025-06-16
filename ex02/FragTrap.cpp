@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 21:36:48 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 21:51:26 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/16 21:52:56 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,5 @@ FragTrap::~FragTrap(){
 	std::cout << RED << "FragTrap " << YELLOW << _name << RED << " was destroyed!"
 		<< RESET << std::endl;
 }
+
+void	FragTrap::highFiveGuys() {}
