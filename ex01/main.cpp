@@ -15,5 +15,11 @@
 
 int	main(void)
 {
+	ScavTrap hobbit("Frodo");
+
+	hobbit.attack("Samwise Gamgi");
+	hobbit.guardGate();
+	hobbit.takeDamage(30);
+	hobbit.beRepaired(10);
 	return 0;
 }

@@ -12,10 +12,27 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(const std::string &name){
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << GREEN << "ScavTrap " << YELLOW << _name << GREEN << " was created!!" << RESET << std::endl;
 }
 
-ScavTrap::~ScavTrap(){};
+ScavTrap::~ScavTrap(){
+	std::cout << RED << "ScavTrap " << YELLOW << _name << RED << " was destroyed!!" << RESET << std::endl;
+};
 
+void	ScavTrap::attack(const std::string &target){
+	if (_energyPoints <= 0 || _hitPoints <= 0)
+		std::cout << RED << "ScavTrap " << YELLOW << _name << RED << " is out of energy or dead!" << RESET << std::endl;
+	else {
+		_energyPoints -= 1;
+		std::cout << BLUE << "ScavTrap " << _name << " violently attacks" << target
+			<< ", causing " << _attackDamage << " points of damage!" << RESET << std::endl;
+	}
+}
 
+void	ScavTrap::guardGate() {
+	std::cout << YELLOW << "ScavTrap " << _name << " is now in Gatekeeper mode!" << RESET << std::endl;
+}
