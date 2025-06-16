@@ -17,7 +17,7 @@ int	main(void)
 {
 	ScavTrap hobbit("Frodo");
 
-	hobbit.attack("Samwise Gamgi");
+	hobbit.attack("Samwise Gamgee");
 	hobbit.guardGate();
 	hobbit.takeDamage(30);
 	hobbit.beRepaired(10);

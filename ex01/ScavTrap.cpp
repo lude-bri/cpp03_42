@@ -28,11 +28,12 @@ void	ScavTrap::attack(const std::string &target){
 		std::cout << RED << "ScavTrap " << YELLOW << _name << RED << " is out of energy or dead!" << RESET << std::endl;
 	else {
 		_energyPoints -= 1;
-		std::cout << BLUE << "ScavTrap " << _name << " violently attacks" << target
-			<< ", causing " << _attackDamage << " points of damage!" << RESET << std::endl;
+		std::cout << BLUE << "ScavTrap " << YELLOW << _name << BLUE << " violently attacks " 
+			YELLOW << target << BLUE << ", causing " << CYAN << _attackDamage << BLUE 
+			<< " points of damage!" << RESET << std::endl;
 	}
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << YELLOW << "ScavTrap " << _name << " is now in Gatekeeper mode!" << RESET << std::endl;
+	std::cout << MAGENTA << "ScavTrap " << _name << " is now in Gatekeeper mode!" << RESET << std::endl;
 }

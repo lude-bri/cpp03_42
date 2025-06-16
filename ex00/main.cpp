@@ -15,12 +15,12 @@
 //melhorar a main
 int	main(void)
 {
-	ClapTrap	Frodo("Frodo");
+	ClapTrap	hobbit("Frodo");
 
-	Frodo.attack("Samwise");
-	Frodo.beRepaired(10);
-	Frodo.takeDamage(10);
-	Frodo.takeDamage(10);
-	Frodo.takeDamage(10);
+	hobbit.attack("Samwise Gamgee");
+	hobbit.beRepaired(10);
+	hobbit.takeDamage(10);
+	hobbit.takeDamage(10);
+	hobbit.takeDamage(10);
 	return 0;
 }
