@@ -17,5 +17,6 @@ int	main(void)
 	ClapTrap	Frodo("Frodo");
 
 	Frodo.attack("Samwise");
+	Frodo.beRepaired(10);
 	return 0;
 }
