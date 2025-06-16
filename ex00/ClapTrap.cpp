@@ -38,5 +38,8 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	if (energyPoint <= 0 || _hitPoints <= 0)
 		std::cout << RED << "ClapTrap doesn't have enough energy points to make this action" << RESET << std::endl;
 	else
+	{
 		std::cout << GREEN << "ClapTrap regains " << RED << amount << GREEN << " hit points!" << std::endl;
+		_energyPoints += amount;
+	}
 }
