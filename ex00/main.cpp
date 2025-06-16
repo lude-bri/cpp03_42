@@ -18,5 +18,6 @@ int	main(void)
 
 	Frodo.attack("Samwise");
 	Frodo.beRepaired(10);
+	Frodo.takeDamage(10);
 	return 0;
 }
