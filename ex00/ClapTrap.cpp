@@ -31,14 +31,12 @@ void	ClapTrap::attack(const std::string& target) {
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
-	//substract amount from _hitPoints
-	//handle cases where _hitPoints drops below 0
 	if (_hitPoints <= 0)
 		std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " is already dead!" << RESET << std::endl;
 	else {
 		_hitPoints = (_hitPoints > amount) ? (_hitPoints - amount) : 0;
-		std::cout << YELLOW << "ClapTrap " << _name << " took " << amount 
-			      << " damage! (" << _hitPoints << " HP left)" << RESET << std::endl;
+		 std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " took " <<CYAN << amount 
+			      << RED << " damage! (" << _hitPoints << " HP left)" << RESET << std::endl;
 	}
 }
 void	ClapTrap::beRepaired(unsigned int amount) {
