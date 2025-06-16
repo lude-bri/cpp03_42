@@ -21,24 +21,30 @@ ClapTrap::~ClapTrap() {
 }
 
 void	ClapTrap::attack(const std::string& target) {
-	int	energyPoint = _energyPoints - 1;
-
-	if (energyPoint <= 0 || _hitPoints <= 0)
-		std::cout << RED << "ClapTrap doesn't have enough energy points to make this action" << RESET << std::endl;
-	else
-		std::cout << BLUE << "ClapTrap " << YELLOW << this->_name << BLUE << " attacks " << YELLOW << target << BLUE << ", causing " << RED << this->_attackDamage << BLUE << " points of damage!" << std::endl;
+	if (_energyPoints <= 0 || _hitPoints <= 0)
+		std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " is out of energy or dead!" << RESET << std::endl;
+	else {
+		_energyPoints -= 1;
+		std::cout << BLUE << "ClapTrap " << YELLOW << this->_name << BLUE << " attacks " << YELLOW 
+			<< target << BLUE << ", causing " << CYAN << this->_attackDamage << BLUE << " points of damage!" << std::endl;
+	}
 }
 
-void	ClapTrap::takeDamage(unsigned int amout) {}
+void	ClapTrap::takeDamage(unsigned int amount) {
+	//substract amount from _hitPoints
+	//handle cases where _hitPoints drops below 0
+	if (_hitPoints <= 0)
+		std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " is already dead!" << RESET << std::endl;
+
+}
 
 void	ClapTrap::beRepaired(unsigned int amount) {
-	int energyPoint = _energyPoints - 1;
 
-	if (energyPoint <= 0 || _hitPoints <= 0)
+	if (_energyPoints <= 0 || _hitPoints <= 0)
 		std::cout << RED << "ClapTrap doesn't have enough energy points to make this action" << RESET << std::endl;
-	else
-	{
-		std::cout << GREEN << "ClapTrap regains " << RED << amount << GREEN << " hit points!" << std::endl;
+	else {
+		_energyPoints -= 1;
 		_hitPoints += amount;
-	}
+		std::cout << GREEN << "ClapTrap " << YELLOW << _name << GREEN << " repaired itself by " 
+              CYAN << amount << GREEN << " HP! (Now: " << _hitPoints << " HP)" << RESET << std::endl;	}
 }
