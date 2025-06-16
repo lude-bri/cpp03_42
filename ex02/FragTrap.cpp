@@ -6,21 +6,21 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 21:36:48 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 21:41:30 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/16 21:51:26 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#include "FragTrap.hpp"
 
-#include "ClapTrap.hpp"
+FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
+	std::cout << GREEN << "FragTrap " << YELLOW << _name << GREEN << " was created!"
+		<< RESET << std::endl;
+}
 
-class FragTrap : public ClapTrap {
-
-public:
-	FragTrap(const std::string &name);
-	~FragTrap();
-
-};
-
-#endif
+FragTrap::~FragTrap(){
+	std::cout << RED << "FragTrap " << YELLOW << _name << RED << " was destroyed!"
+		<< RESET << std::endl;
+}
