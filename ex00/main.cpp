@@ -12,6 +12,7 @@
 
 #include "ClapTrap.hpp"
 
+//melhorar a main
 int	main(void)
 {
 	ClapTrap	Frodo("Frodo");
