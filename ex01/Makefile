@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= ClapTrap
+NAME			= ScavTrap
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]
@@ -28,6 +28,7 @@ TEMP_PATH		= .temp
 ### Files Source
 FILES = main.cpp
 FILES += ClapTrap.cpp
+FILES += ScavTrap.cpp
 
 ### Paths
 SRC		= $(addprefix $(SRC_PATH)/, $(FILES))
