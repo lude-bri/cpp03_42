@@ -14,5 +14,8 @@
 
 int	main(void)
 {
+	ClapTrap	Frodo("Frodo");
+
+	Frodo.attack("Samwise");
 	return 0;
 }

@@ -37,7 +37,7 @@ class ClapTrap {
 		int			_attackDamage;
 
 	public:
-		ClapTrap(std::string &name);
+		ClapTrap(const std::string &name);
 		~ClapTrap();
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
