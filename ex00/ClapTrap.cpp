@@ -35,11 +35,12 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 	//handle cases where _hitPoints drops below 0
 	if (_hitPoints <= 0)
 		std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " is already dead!" << RESET << std::endl;
-	_hitPoints = (_hitPoints > amount) ? (_hitPoints - amount) : 0;
-	std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " took " << CYAN << amount << RED
-		<< " damage!" << RESET << std::endl;
+	else {
+		_hitPoints = (_hitPoints > amount) ? (_hitPoints - amount) : 0;
+		std::cout << YELLOW << "ClapTrap " << _name << " took " << amount 
+			      << " damage! (" << _hitPoints << " HP left)" << RESET << std::endl;
+	}
 }
-
 void	ClapTrap::beRepaired(unsigned int amount) {
 
 	if (_energyPoints <= 0 || _hitPoints <= 0)
