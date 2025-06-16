@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 21:36:48 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 22:02:07 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/16 22:04:22 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,7 @@ FragTrap::~FragTrap(){
 		<< RESET << std::endl;
 }
 
-void	FragTrap::highFiveGuys(void) {}
+void	FragTrap::highFiveGuys(void) {
+	std::cout << MAGENTA << "FragTrap " << YELLOW << _name << MAGENTA <<
+		" gives you a very nice high five!" << RESET << std::endl;
+}
