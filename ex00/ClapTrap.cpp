@@ -13,7 +13,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << GREEN << "ClapTrap was created!!" << RESET << std::endl;
+	std::cout << GREEN << "ClapTrap " << YELLOW << _name << GREEN << " was created!!" << RESET << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
@@ -21,7 +21,6 @@ ClapTrap::~ClapTrap() {
 }
 
 void	ClapTrap::attack(const std::string& target) {
-	//ClapTRap <name> attacks <target>, causing <damage> points of damage!
 	int	energyPoint = _energyPoints - 1;
 
 	if (energyPoint <= 0 || _hitPoints <= 0)
@@ -40,6 +39,6 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	else
 	{
 		std::cout << GREEN << "ClapTrap regains " << RED << amount << GREEN << " hit points!" << std::endl;
-		_energyPoints += amount;
+		_hitPoints += amount;
 	}
 }
