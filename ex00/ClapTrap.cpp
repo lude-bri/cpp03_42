@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _ener
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << RED << "ClapTrap was destroyed!" << RESET << std::endl;
+	std::cout << RED << "ClapTrap " << YELLOW << _name << RED << " was destroyed!" << RESET << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target) {
