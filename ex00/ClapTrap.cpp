@@ -24,7 +24,7 @@ void	ClapTrap::attack(const std::string& target) {
 	//ClapTRap <name> attacks <target>, causing <damage> points of damage!
 	int	energyPoint = _energyPoints - 1;
 
-	if (energyPoint <= 0)
+	if (energyPoint <= 0 || _hitPoints <= 0)
 		std::cout << RED << "ClapTrap doesn't have enough energy points to make this action" << RESET << std::endl;
 	else
 		std::cout << BLUE << "ClapTrap " << YELLOW << this->_name << BLUE << " attacks " << YELLOW << target << BLUE << ", causing " << RED << this->_attackDamage << BLUE << " points of damage!" << std::endl;
@@ -35,7 +35,7 @@ void	ClapTrap::takeDamage(unsigned int amout) {}
 void	ClapTrap::beRepaired(unsigned int amount) {
 	int energyPoint = _energyPoints - 1;
 
-	if (energyPoint <= 0)
+	if (energyPoint <= 0 || _hitPoints <= 0)
 		std::cout << RED << "ClapTrap doesn't have enough energy points to make this action" << RESET << std::endl;
 	else
 		std::cout << GREEN << "ClapTrap regains " << RED << amount << GREEN << " hit points!" << std::endl;
