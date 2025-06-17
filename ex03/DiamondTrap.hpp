@@ -13,7 +13,6 @@
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-
 # include "FragTrap.hpp"
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"

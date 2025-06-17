@@ -12,14 +12,40 @@
 
 #include "ClapTrap.hpp"
 
+//Default Constructor
+ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+	std::cout << GREEN << "ClapTrap " << _name << " was created!!" << RESET << std::endl; 
+}
+
+//Copy Constructor
+ClapTrap::ClapTrap(const ClapTrap  &copy) {
+	*this = copy;
+	std::cout << GREEN << "ClapTrap copy constructor called for " << _name << RESET << std::endl;
+}
+
+//Copy assignment Operator
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy) {
+	if (this != &copy){
+		_name = copy._name;
+		_hitPoints = copy._hitPoints;
+		_energyPoints = copy._energyPoints;
+		_attackDamage = copy._attackDamage;
+	}
+	std::cout << GREEN << "ClapTrap copy assignment constructor called for " << _name << RESET << std::endl;
+	return (*this);
+}
+
+//Constructor
 ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 	std::cout << GREEN << "ClapTrap " << _name << " was created!!" << RESET << std::endl;
 }
 
+//Destructor
 ClapTrap::~ClapTrap() {
 	std::cout << GREEN << "ClapTrap " << _name << " was destroyed!" << RESET << std::endl;
 }
 
+//ClapTrap Attack Method
 void	ClapTrap::attack(const std::string& target) {
 	if (_energyPoints <= 0 || _hitPoints <= 0)
 		std::cout << GREEN << "ClapTrap " << _name << " is out of energy or dead!" 
@@ -32,6 +58,7 @@ void	ClapTrap::attack(const std::string& target) {
 	}
 }
 
+//ClapTrap Damage Method
 void	ClapTrap::takeDamage(unsigned int amount) {
 	if (_hitPoints <= 0)
 		std::cout << GREEN << "ClapTrap " << _name << " is already dead!" << RESET << std::endl;
@@ -41,6 +68,8 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 			      << " damage! (" << _hitPoints << " HP left)" << RESET << std::endl;
 	}
 }
+
+//ClapTrap Repair Method
 void	ClapTrap::beRepaired(unsigned int amount) {
 
 	if (_energyPoints <= 0 || _hitPoints <= 0)
