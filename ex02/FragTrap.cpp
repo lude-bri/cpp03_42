@@ -54,5 +54,10 @@ FragTrap::~FragTrap(){
 
 //FragTrap highFive!!
 void	FragTrap::highFivesGuys(void) {
-	std::cout << BLUE << "FragTrap " << _name << " gives you a very nice high five!" << RESET << std::endl;
+	if (_energyPoints <= 0 || _hitPoints <= 0)
+		std::cout << BLUE << "FragTrap " << _name << " is out of energy or dead!" << RESET << std::endl;
+	else {
+		_energyPoints -= 1;
+		std::cout << BLUE << "FragTrap " << _name << " gives you a very nice high five!" << RESET << std::endl;
+	}
 }
