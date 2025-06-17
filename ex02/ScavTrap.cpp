@@ -64,5 +64,10 @@ void	ScavTrap::attack(const std::string &target){
 
 //ScavTrap Gatekeeper
 void	ScavTrap::guardGate() {
-	std::cout << YELLOW << "ScavTrap " << _name << " is now in Gatekeeper mode!" << RESET << std::endl;
+	if (_energyPoints <= 0 || _hitPoints <= 0)
+		std::cout << YELLOW << "ScavTrap " << _name << " is out of energy or dead!" << RESET << std::endl;
+	else {
+		_energyPoints -= 1;
+		std::cout << YELLOW << "ScavTrap " << _name << " is now in Gatekeeper mode!" << RESET << std::endl;
+	}
 }
