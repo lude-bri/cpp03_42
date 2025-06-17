@@ -24,7 +24,7 @@ public:
 	FragTrap(const std::string &name);
 	~FragTrap();
 
-	void	highFiveGuys(void);
+	void	highFivesGuys(void);
 };
 
 #endif

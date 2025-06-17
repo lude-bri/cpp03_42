@@ -82,3 +82,6 @@ void	ClapTrap::beRepaired(unsigned int amount) {
               << amount << " HP! (Now: " << _hitPoints << " HP)" << RESET << std::endl;
 	}
 }
+
+//Getter
+int		ClapTrap::getEnergyPoints() {return _energyPoints;}
