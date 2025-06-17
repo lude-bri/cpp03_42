@@ -12,7 +12,6 @@
 
 #include "ClapTrap.hpp"
 
-//melhorar a main
 int	main(void)
 {
 	std::cout << MAGENTA << "== TEST CLAPTRAP == " << RESET << std::endl;
