@@ -16,16 +16,15 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << GREEN << "FragTrap " << YELLOW << _name << GREEN << " was FREAKING created!"
+	std::cout << BLUE << "FragTrap " << _name << " was FREAKING created!"
 		<< RESET << std::endl;
 }
 
 FragTrap::~FragTrap(){
-	std::cout << RED << "FragTrap " << YELLOW << _name << RED << " was FREAKING destroyed!"
+	std::cout << BLUE << "FragTrap " << _name << " was FREAKING destroyed!"
 		<< RESET << std::endl;
 }
 
 void	FragTrap::highFiveGuys(void) {
-	std::cout << MAGENTA << "FragTrap " << YELLOW << _name << MAGENTA <<
-		" gives you a very nice high five!" << RESET << std::endl;
+	std::cout << BLUE << "FragTrap " << _name << " gives you a very nice high five!" << RESET << std::endl;
 }
