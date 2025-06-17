@@ -22,6 +22,11 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 
 	private :
 		std::string _name;
+	public:
+		DiamondTrap(const std::string &name);
+		~DiamondTrap();
+
+		void	whoAmI(); //will display both its name and ClapTrap name
 };
 
 #endif
