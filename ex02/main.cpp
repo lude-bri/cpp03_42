@@ -12,12 +12,36 @@
 
 #include "FragTrap.hpp"
 
-//melhorar main later
-int main(void)
-{
-	FragTrap hobbit("Samwise Gamgee");
+int main(void) {
+    std::cout << MAGENTA << "\n== TEST FRAGTRAP ==" << RESET << std::endl;
 
-	hobbit.attack("Frodo");
-	hobbit.takeDamage(10);
-	hobbit.highFiveGuys();
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 1. Building Test] "<< RESET << std::endl;
+    FragTrap hobbit("Bilbo");
+
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 2. Attack Test] "<< RESET << std::endl;
+    hobbit.attack("Frodo");
+
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 3. High Five Test] "<< RESET << std::endl;
+    hobbit.highFivesGuys();
+
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 4. Damage and Repair Test] "<< RESET << std::endl;
+    hobbit.takeDamage(30);
+    hobbit.beRepaired(15);
+
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 5. Energy Drain Test] "<< RESET << std::endl;
+    for (int i = 0; i < 99; i++)
+        hobbit.attack("Frodo");
+
+    std::cout << std::endl;
+    std::cout << BOLD << CYAN << " [Test 6. Death Test] "<< RESET << std::endl;
+    hobbit.takeDamage(200);
+    hobbit.highFivesGuys(); // Should fail
+    hobbit.beRepaired(10);  // Should fail
+
+    return 0;
 }
