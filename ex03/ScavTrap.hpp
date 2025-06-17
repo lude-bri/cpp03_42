@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 22:10:19 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 22:12:23 by lude-bri         ###   ########.fr       */
+/*   Created: 2025/06/16 21:33:32 by lude-bri          #+#    #+#             */
+/*   Updated: 2025/06/16 21:33:32 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 class ScavTrap : virtual public ClapTrap {
 
 public:
+	ScavTrap();
+	ScavTrap(const ScavTrap &copy);
+	ScavTrap &operator=(const ScavTrap &copy);
 	ScavTrap(const std::string &name);
 	~ScavTrap();
 

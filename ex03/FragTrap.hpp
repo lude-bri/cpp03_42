@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 22:10:07 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 22:11:39 by lude-bri         ###   ########.fr       */
+/*   Created: 2025/06/16 21:46:46 by lude-bri          #+#    #+#             */
+/*   Updated: 2025/06/16 21:46:49 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 class FragTrap : virtual public ClapTrap {
 
 public:
+	FragTrap();
+	FragTrap(const FragTrap &copy);
+	FragTrap &operator=(const FragTrap &copy);
 	FragTrap(const std::string &name);
 	~FragTrap();
 

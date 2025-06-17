@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 22:09:53 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/16 22:11:10 by lude-bri         ###   ########.fr       */
+/*   Created: 2025/06/11 17:05:04 by lude-bri          #+#    #+#             */
+/*   Updated: 2025/06/16 16:18:22 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,15 @@ class ClapTrap {
 		int			_attackDamage;
 
 	public:
+		ClapTrap();
+		ClapTrap(const ClapTrap &copy);
+		ClapTrap &operator=(const ClapTrap &copy);
 		ClapTrap(const std::string &name);
 		~ClapTrap();
+
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
-
 		int			getEnergyPoints();
 };
 
