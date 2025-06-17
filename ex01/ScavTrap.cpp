@@ -58,7 +58,7 @@ void	ScavTrap::attack(const std::string &target){
 		_energyPoints -= 1;
 		std::cout << YELLOW << "ScavTrap " << _name << " violently attacks " 
 			<< target << ", causing " << _attackDamage 
-			<< " points of damage!" << RESET << std::endl;
+			<< " points of damage! " << "(Energy Points left: " << _energyPoints << ")" << RESET << std::endl;
 	}
 }
 
