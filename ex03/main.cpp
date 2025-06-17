@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "DiamondTrap.hpp"
 
+int	main(void)
+{
+	DiamondTrap hobbit("Frodo");
+
+	hobbit.attack("Sam");
+	hobbit.beRepaired(10);
+	hobbit.takeDamage(100);
+}

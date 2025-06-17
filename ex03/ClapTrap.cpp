@@ -49,3 +49,5 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 		std::cout << GREEN << "ClapTrap " << YELLOW << _name << GREEN << " repaired itself by " 
               CYAN << amount << GREEN << " HP! (Now: " << _hitPoints << " HP)" << RESET << std::endl;	}
 }
+
+int		ClapTrap::getEnergyPoints() {return _energyPoints;}

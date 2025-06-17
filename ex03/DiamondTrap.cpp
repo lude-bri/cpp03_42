@@ -15,9 +15,12 @@
 DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"),
 	ScavTrap(name), FragTrap(name), _name(name) {
 
+	ScavTrap    scav("energy");
+
 	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_energyPoints;
+	_energyPoints = scav.getEnergyPoints();
 	_attackDamage = FragTrap::_attackDamage;
+
 	std::cout << GREEN << "DiamondTrap " << YELLOW << _name << GREEN
 		<< " was created! " << RESET << std::endl;
 }
