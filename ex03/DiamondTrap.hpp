@@ -14,7 +14,6 @@
 # define DIAMONDTRAP_HPP
 
 # include "FragTrap.hpp"
-# include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 
 class DiamondTrap : public ScavTrap, public FragTrap {
@@ -22,10 +21,14 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 	private :
 		std::string _name;
 	public:
+		DiamondTrap();
+		DiamondTrap(const DiamondTrap &copy);
+		DiamondTrap &operator=(const DiamondTrap &copy);
 		DiamondTrap(const std::string &name);
 		~DiamondTrap();
 
 		void	whoAmI(); //will display both its name and ClapTrap name
+		void	attack(const std::string &target);
 };
 
 #endif
