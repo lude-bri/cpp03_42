@@ -18,6 +18,10 @@
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 
-class DiamondTrap {};
+class DiamondTrap : public ScavTrap, public FragTrap {
+
+	private :
+		std::string _name;
+};
 
 #endif
